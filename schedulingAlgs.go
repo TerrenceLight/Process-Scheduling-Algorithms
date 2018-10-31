@@ -24,6 +24,7 @@ type proc struct {
 	wait int
 }
 
+//First come First served process scheduling algorithm
 func fcfs(runfor int, procCount int, procs []proc, output *bufio.Writer) {
 	//Title output
 	fmt.Fprintf(output, "Using First-Come First-Served\n")
@@ -90,6 +91,7 @@ func fcfs(runfor int, procCount int, procs []proc, output *bufio.Writer) {
 	timeReport(procCount, procs, output)
 }
 
+//Shortest Job First scheduling algorithm
 func sjf(runfor int, procCount int, procs []proc, output *bufio.Writer) {
 	//Title output
 	fmt.Fprintf(output, "Using preemptive Shortest Job First\n")
@@ -181,6 +183,7 @@ func sjf(runfor int, procCount int, procs []proc, output *bufio.Writer) {
 	timeReport(procCount, procs, output)
 }
 
+//Round-robin scheduling algorithm
 func rr(runfor int, procCount int, procs []proc, quantum int, output *bufio.Writer) {
 	//Title output
 	fmt.Fprintf(output, "Using Round-Robin\n")
