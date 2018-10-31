@@ -1,5 +1,3 @@
-//I Terrence Light (TE965355) affirm that this program is entirely my own work and that I have neither developed my code together with any another person, nor copied any code from any other person, nor permitted my code to be copied or otherwise used by any other person, nor have I copied, modified, or otherwise used programs created by others. I acknowledge that any violation of the above terms will be treated as academic dishonesty.
-
 //Terrence Light te965355
 //COP 4600 Operating Systems
 //Project 1: Scheduling Algorithms
@@ -77,7 +75,7 @@ func fcfs(runfor int, procCount int, procs []proc, output *bufio.Writer) {
 	}
 	
 	//Enter wait, and turnaround time data into the process array
-	//If only Eustis server had slice sorting...
+	//Our school server did not have golang updated, so I didn't have access to slice sorting
 	for i := 0; i < procCount; i++ {
 		for curProc := 0; curProc < procCount; curProc++ {
 			if procs[curProc].name == schedQueue[i].name {
@@ -168,7 +166,7 @@ func sjf(runfor int, procCount int, procs []proc, output *bufio.Writer) {
 	}
 	
 	//Enter wait, and turnaround time data into the process array
-	//If only Eustis server had slice sorting...
+	//Our school server did not have golang updated, so I didn't have access to slice sorting
 	for i := 0; i < procCount; i++ {
 		for curProc := 0; curProc < procCount; curProc++ {
 			if procs[curProc].name == schedQueue[i].name {
